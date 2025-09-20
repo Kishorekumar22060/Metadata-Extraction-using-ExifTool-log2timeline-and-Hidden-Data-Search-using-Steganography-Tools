@@ -58,5 +58,11 @@ Export or recover files if required for the investigation.
 ![WhatsApp Image 2025-09-20 at 14 37 15](https://github.com/user-attachments/assets/1fc01426-4a35-4968-a77b-03153b331ba6)
 ![WhatsApp Image 2025-09-20 at 14 37 18](https://github.com/user-attachments/assets/9d0765d6-477f-49cd-8129-1e3de4a8e606)
 
+<img width="975" height="520" alt="3 55" src="https://github.com/user-attachments/assets/86ef02eb-1d8c-4b18-a5e7-1e57096b07e6" />
+
+<img width="1914" height="930" alt="3 6" src="https://github.com/user-attachments/assets/0410bcf7-809b-4e94-952e-26f7baa2f053" />
+<img width="1917" height="874" alt="3 7" src="https://github.com/user-attachments/assets/aee6d822-9368-4012-b049-7db8cd87ef2d" />
+
+
 ## RESULT:
 Autopsy was installed successfully and used to analyze disk, file, and folder configuration for forensic investigation.
