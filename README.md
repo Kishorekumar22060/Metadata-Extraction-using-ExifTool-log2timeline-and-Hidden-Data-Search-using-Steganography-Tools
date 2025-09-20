@@ -59,8 +59,8 @@ Export or recover files if required for the investigation.
 ![WhatsApp Image 2025-09-20 at 14 37 18](https://github.com/user-attachments/assets/9d0765d6-477f-49cd-8129-1e3de4a8e606)
 
 
-<img w<img width="887" height="473" alt="Screenshot 2025-09-20 at 8 52 50 PM" src="https://github.com/user-attachments/assets/94d8a5a6-2346-4001-9267-60e5f0569529" />
-idth="1914" height="930" alt="3 6" src="https://github.com/user-attachments/assets/0410bcf7-809b-4e94-952e-26f7baa2f053" />
+<img width="1914" height="930" alt="3 6" src="https://github.com/user-attachments/assets/0410bcf7-809b-4e94-952e-26f7baa2f053" />
+<img width="887" height="473" alt="Screenshot 2025-09-20 at 8 52 50 PM" src="https://github.com/user-attachments/assets/94d8a5a6-2346-4001-9267-60e5f0569529" />
 <img width="1917" height="874" alt="3 7" src="https://github.com/user-attachments/assets/aee6d822-9368-4012-b049-7db8cd87ef2d" />
 
 
