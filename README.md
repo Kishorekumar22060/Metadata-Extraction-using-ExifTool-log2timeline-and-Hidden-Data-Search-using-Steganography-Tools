@@ -1,68 +1,104 @@
-# Install Autopsy and Analyze the Disk File and Folder Configuration
-
-## AIM
-To install **Autopsy** and use it to analyze the disk’s file and folder configuration for forensic investigation.
-
+# Metadata-Extraction-using-ExifTool-log2timeline-and-Hidden-Data-Search-using-Steganography-Tools
+## AIM:
+To extract metadata, perform timeline analysis, and search for hidden data using forensic tools like ExifTool, log2timeline, and steganography detection tools.
 ## REQUIREMENTS
-- **Operating System**: Windows 10/11, macOS, or Linux
-- **Tools**:  
-  - [Autopsy Digital Forensics Platform](https://www.autopsy.com/)  
-  - Optional: Sleuth Kit CLI tools for deeper analysis
-- **Test Data**: Disk image file (`.dd`, `.img`, `.E01`)
-
+- **Operating System:** Kali Linux (preferred) or any Linux distro with forensic tools
+- **Tools:**
+     -  ExifTool – For metadata extraction
+     -  plaso/log2timeline – For timeline analysis
+- **Steganography tools:** steghide, zsteg, binwalk
+- **Test Data:** Image, video, and document files (some with embedded hidden data)
 ## ARCHITECTURE DIAGRAM
 ```mermaid
 flowchart TD
-    A[Disk Image / Physical Drive] --> B[Install Autopsy]
-    B --> C[Create New Case in Autopsy]
-    C --> D[Add Data Source: Disk Image]
-    D --> E["Autopsy Modules Run: File System, Metadata, Keywords"]
-    E --> F[File & Folder Structure View]
-    F --> G[Export / Recover Files]
+    A[Sample Files - Images, Videos, Documents] --> B[Metadata Extraction with ExifTool]
+    B --> C[Event Timeline Creation with log2timeline]
+    C --> D[Hidden Data Search with Steganography Tools]
+    D --> E[Evidence Analysis and Documentation]
 ```
 ## DESIGN STEPS:
 ### Step 1:
-Download Autopsy from the official website and install it on your system.
+Use exiftool to extract metadata from files such as images, documents, and videos.
 
 ### Step 2:
-Launch Autopsy and create a new case.
+Use log2timeline and plaso to create and analyze event timelines from system logs and file metadata.
 
 ### Step 3:
-Add your disk image or physical drive as the data source.
+Apply steganography detection tools like steghide, zsteg, or binwalk to uncover hidden data in media files.
 
-### Step 4:
-Allow Autopsy to run its built-in ingest modules (file system analysis, hash lookup, keyword search, metadata extraction).
+## PROGRAM:
+| Step | Action                  | Tool                 | Output                           |
+| ---- | ----------------------- | -------------------- | -------------------------------- |
+| 1    | Extract file metadata   | ExifTool             | Metadata fields, GPS, timestamps |
+| 2    | Generate event timeline | log2timeline / plaso | CSV/HTML timeline                |
+| 3    | Search for hidden data  | steghide / binwalk   | Extracted hidden files           |
+| 4    | Document findings       | Manual report        | Investigation record             |
 
-### Step 5:
-View the file and folder hierarchy in the left-hand tree panel.
-
-### Step 6:
-Export or recover files if required for the investigation.
-
-## PROGRAM(Windows)
-
-1. Download Autopsy from autopsy.com.
-2. Install and launch the application.
-3. Select **New Case → Name your case → Choose case folder**.
-4. Click Add **Data Source → Select Disk Image → Browse to file**.
-5. Choose ingest modules (file system, metadata, hash lookup, keyword search).
-6. Wait for processing to finish.
-7. Explore file/folder structure in the navigation pane.
-8.Export selected files for further examination.
 
 ## OUTPUT:
-<img width="1898" height="955" alt="436824504-f59bf54d-2fe1-4e89-8647-87e4f961686f" src="https://github.com/user-attachments/assets/550b1b99-d002-45e0-a321-c2028ad59b3a" />
+### A. Using ExifTool – for file metadata
+- **Install:**
+```bash
+sudo apt update
+sudo apt install exiftool -y
+```
+- **Extract metadata from a file:**
+```bash
+exiftool image.jpg
+```
 
-![WhatsApp Image 2025-09-20 at 14 37 15 (1)](https://github.com/user-attachments/assets/f04be898-5bc3-4116-bac2-a5ce39092210)
-![WhatsApp Image 2025-09-20 at 14 37 15 (2)](https://github.com/user-attachments/assets/568085e9-89be-4fac-85b1-c72e26d373a1)
-![WhatsApp Image 2025-09-20 at 14 37 15](https://github.com/user-attachments/assets/1fc01426-4a35-4968-a77b-03153b331ba6)
-![WhatsApp Image 2025-09-20 at 14 37 18](https://github.com/user-attachments/assets/9d0765d6-477f-49cd-8129-1e3de4a8e606)
+
+<img width="711" height="513" alt="Screenshot 2025-09-20 195115" src="https://github.com/user-attachments/assets/589896cd-a6c9-4c36-80a7-103a2fe68ac4" />
 
 
-<img width="1914" height="930" alt="3 6" src="https://github.com/user-attachments/assets/0410bcf7-809b-4e94-952e-26f7baa2f053" />
-<img width="887" height="473" alt="Screenshot 2025-09-20 at 8 52 50 PM" src="https://github.com/user-attachments/assets/94d8a5a6-2346-4001-9267-60e5f0569529" />
-<img width="1917" height="874" alt="3 7" src="https://github.com/user-attachments/assets/aee6d822-9368-4012-b049-7db8cd87ef2d" />
+
+- **Batch process a folder:**
+```bash
+exiftool -r /path/to/folder
+```
+- **Useful flags:**
+  
+- ```-G: Show metadata group```
+
+- ```-time:all: Show only timestamps```
+
+- ```-GPSLatitude -GPSLongitude: Extract GPS data```
+
+
+
+### install log2timeline
+```
+sudo apt install plaso -y
+```
+
+```
+sudo apt install steghide -y
+```
+- **Embed data**
+```
+steghide embed -cf /home/kali/Downloads/wallpaper.jpg -ef /home/kali/Downloads/secret.txt
+```
+
+<img width="749" height="74" alt="Screenshot 2025-09-20 195123" src="https://github.com/user-attachments/assets/8459fa22-27e4-464a-b8f1-a6f37acd3967" />
+
+- **Extract hidden data:**
+```
+steghide extract -sf hidden.jpg
+
+```
+<img width="746" height="46" alt="Screenshot 2025-09-20 195133" src="https://github.com/user-attachments/assets/aaa2b5ea-b5de-4464-9bda-24b2f59db7c9" />
+
+
+### Using binwalk – for file analysis
+```bash
+sudo apt install binwalk -y
+binwalk suspicious.jpg
+```
+```bash
+binwalk /home/kali/Downloads/wallpaper.jpg
+```
+<img width="730" height="428" alt="Screenshot 2025-09-20 195147" src="https://github.com/user-attachments/assets/e61fad7d-90fb-4331-b962-f8681d94fbeb" />
 
 
 ## RESULT:
-Autopsy was installed successfully and used to analyze disk, file, and folder configuration for forensic investigation.
+Metadata was successfully extracted, timeline analysis was completed, and hidden data was identified using steganography tools.
