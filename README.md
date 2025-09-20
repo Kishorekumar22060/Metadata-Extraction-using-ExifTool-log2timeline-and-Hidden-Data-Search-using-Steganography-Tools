@@ -51,6 +51,8 @@ Export or recover files if required for the investigation.
 8.Export selected files for further examination.
 
 ## OUTPUT:
+<img width="1898" height="955" alt="436824504-f59bf54d-2fe1-4e89-8647-87e4f961686f" src="https://github.com/user-attachments/assets/550b1b99-d002-45e0-a321-c2028ad59b3a" />
+
 ![WhatsApp Image 2025-09-20 at 14 37 15 (1)](https://github.com/user-attachments/assets/f04be898-5bc3-4116-bac2-a5ce39092210)
 ![WhatsApp Image 2025-09-20 at 14 37 15 (2)](https://github.com/user-attachments/assets/568085e9-89be-4fac-85b1-c72e26d373a1)
 ![WhatsApp Image 2025-09-20 at 14 37 15](https://github.com/user-attachments/assets/1fc01426-4a35-4968-a77b-03153b331ba6)
